@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>BAIT Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="myFunctions.js"></script>
+    <style>
+        
+        .meal-img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="AboutUs.html">About</a>
+        <a href="Meals.html">Meals</a>
+    </nav>
+    
+
+    <h1>الوجبات الخاصة بنا </h1>
+    <table border="1" dir="rtl" style="text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>Meal name</th>
+                <th>The images</th>
+                <th>Details</th>
+                <th>Price</th>
+                <th>Code</th>
+                <th>Select</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>وجبة سمك بوري مشوي لشخصين</td>
+                <td><img src="assests/images/fish.jpeg" alt="سمك بوري" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d1')">عرض التفاصيل</button></td>
+                <td>110000</td>
+                <td>SF-001</td>
+                <td><input type="checkbox" class="meal-check" data-price="110000"></td>
+            </tr>
+            <tr id="d1" style="display:none;">
+                <td colspan="6">
+                    السمك: 2 سمكة بوري متوسطة الحجم (حوالي 800 جرام إلى 1 كيلو إجمالاً).
+                    
+                    </td>
+            </tr>
+    
+            <tr>
+                <td>شاورما دجاج</td>
+                <td><img src="assests/images/shawrma.jpeg" alt="شاورما" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d2')">عرض التفاصيل</button></td>
+                <td>90000</td>
+                <td>SF-002</td>
+                <td><input type="checkbox" class="meal-check" data-price="90000"></td>
+            </tr>
+            <tr id="d2" style="display:none;">
+                <td colspan="6">صندويشة شاورما حجم عادي لشخص مع مخلل ومايونيز</td>
+            </tr>
+    
+            <tr>
+                <td>كريسبي</td>
+                <td><img src="assests/images/cookies.jpeg" alt="كريسبي" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d3')">عرض التفاصيل</button></td>
+                <td>85000</td>
+                <td>SF-003</td>
+                <td><input type="checkbox" class="meal-check" data-price="85000"></td>
+            </tr>
+            <tr id="d3" style="display:none;">
+                <td colspan="6">وجبة كريسبي مع بطاطا مقلية وثلاث أنواع صوصات مختلفة ومخلل</td>
+            </tr>
+    
+            <tr>
+                <td>بيتزا خضار</td>
+                <td><img src="assests/images/pizza.jpeg" alt="بيتزا" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d4')">عرض التفاصيل</button></td>
+                <td>70000</td>
+                <td>SF-004</td>
+                <td><input type="checkbox" class="meal-check" data-price="70000"></td>
+            </tr>
+            <tr id="d4" style="display:none;">
+                <td colspan="6">بيتزا حجم متوسط مع فليفلة خضراء و زيتون و ذرة وفطر</td>
+            </tr>
+    
+            <tr>
+                <td>فلافل</td>
+                <td><img src="assests/images/falafel.jpeg" alt="فلافل" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d5')">عرض التفاصيل</button></td>
+                <td>60000</td>
+                <td>SF-005</td>
+                <td><input type="checkbox" class="meal-check" data-price="60000"></td>
+            </tr>
+            <tr id="d5" style="display:none;">
+                <td colspan="6">فلافل مع حمص</td>
+            </tr>
+    
+            <tr>
+                <td>مشاوي</td>
+                <td><img src="assests/images/grill.jpg" alt="مشاوي" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d6')">عرض التفاصيل</button></td>
+                <td>95000</td>
+                <td>SF-006</td>
+                <td><input type="checkbox" class="meal-check" data-price="95000"></td>
+            </tr>
+            <tr id="d6" style="display:none;">
+                <td colspan="6">بصل مشوي وطماطم مقلية وتنين كباب وتنين شيش يكفي لشخصين</td>
+            </tr>
+    
+            <tr>
+                <td>بطاطا مقلية</td>
+                <td><img src="assests/images/fries.jpeg" alt="بطاطا" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d7')">عرض التفاصيل</button></td>
+                <td>50000</td>
+                <td>SF-007</td>
+                <td><input type="checkbox" class="meal-check" data-price="50000"></td>
+            </tr>
+            <tr id="d7" style="display:none;">
+                <td colspan="6">حجم كبير من البطاطا المقلية المقرمشة</td>
+            </tr>
+    
+            <tr>
+                <td>كوكيز</td>
+                <td><img src="assests/images/cookies.jpeg" alt="كوكيز" class="meal-img" width="50"></td>
+                <td><button class="btn-details" onclick="toggleDetails('d8')">عرض التفاصيل</button></td>
+                <td>40000</td>
+                <td>SF-008</td>
+                <td><input type="checkbox" class="meal-check" data-price="40000"></td>
+            </tr>
+            <tr id="d8" style="display:none;">
+                <td colspan="6">حلوى الكوكيز المليئة برقائق الشوكولا</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <button class="btn-continue" onclick="showForm()">متابعة الطلب</button>
+
+    <div id="orderForm" style="display:none;">
+        <h2>Order Form</h2>
+        <form>
+            الاسم الكامل: <input type="text" id="name"><br><br>
+            الرقم الوطني: <input type="text" id="nid"><br><br>
+            تاريخ الولادة: <input type="date" id="birth"><br><br>
+            الموبايل: <input type="text" id="mobile"><br><br>
+            الإيميل: <input type="email" id="email"><br><br>
+            <button type="button" onclick="submitOrder()">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>
